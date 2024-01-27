@@ -67,7 +67,7 @@ export const Show = () => {
       <AreaChart
         width={500}
         height={400}
-        data={data}
+        data={store.graphData}
         margin={{
           top: 10,
           right: 30,
