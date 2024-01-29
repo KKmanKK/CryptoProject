@@ -1,0 +1,22 @@
+.item {
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  .link {
+    width: 40%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    width: 10%;
+  }
+  .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}

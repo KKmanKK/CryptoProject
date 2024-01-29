@@ -1,0 +1,16 @@
+.menu {
+  background-color: black;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .menuLink {
+    text-decoration: none;
+  }
+  a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+  }
+}

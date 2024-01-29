@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { homeStore } from "../stores/homeStore";
 import { Link } from "react-router-dom";
+import { ListCoins } from "../components/ListCoins/ListCoins";
+import { Input } from "../components/Input/Input";
 
 export const Home = () => {
   const store = homeStore();
@@ -8,16 +10,14 @@ export const Home = () => {
     store.fetchCoint();
   }, []);
   return (
-    <div>
-      <input type="text" value={store.query} onChange={store.setQuery} />
-
-      {store.coins.map((coin) => {
-        return (
-          <div key={coin.id}>
-            <Link to={`${coin.id}`}>{coin.name}</Link>
-          </div>
-        );
-      })}
+    <div className="main">
+      <div className="container">
+        <div className="main__inner">
+          <div>Search for a coin</div>
+          <Input text={store.qyery} handleChange={store.setQuery} />
+          <ListCoins />
+        </div>
+      </div>
     </div>
   );
 };
